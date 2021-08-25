@@ -6,7 +6,8 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static('library'))
 
 app.get("/",function(req,res){
-  res.sendFile('login.html',{root:__dirname})
+  //res.sendFile('login.html',{root:__dirname})
+  res.render("success,ejs");
 });
 
 app.post("/success",function(req,res){
@@ -18,9 +19,6 @@ app.post("/success",function(req,res){
         }
       });
 
-
-      
-      
     var username = req.body.username;
     var password = req.body.password;
     password = JSON.stringify(password,null,2);

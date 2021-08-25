@@ -7,7 +7,7 @@ app.use(express.static('library'))
 
 app.get("/",function(req,res){
   //res.sendFile('login.html',{root:__dirname})
-  res.render("success,ejs");
+  res.render("success.ejs");
 });
 
 app.post("/success",function(req,res){

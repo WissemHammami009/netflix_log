@@ -5,9 +5,11 @@ var fs = require("fs");
 var nodemailer = require('nodemailer');
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static('library'))
+
 app.get("/",function(req,res){
     res.sendFile('login.html',{root:__dirname})
 });
+
 app.post("/success",function(req,res){
     var transporter = nodemailer.createTransport({
         service: 'gmail',

